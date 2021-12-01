@@ -41,7 +41,7 @@ module.exports = {
       name: 'build: 打包'
     }
   ],
-  message: {
+  messages: {
     type: '请选择提交类型：',
     customScope: '请输入修改的范围（可选）',
     subject: '请简要描述提交（必填）',
@@ -49,5 +49,6 @@ module.exports = {
     footer: '请输入要关闭的issue（可选）',
     confirmCommit: '确认要使用以上信息提交？（y/n）'
   },
+  skipQuestions: ['body', 'footer'],
   subjectLimit: 72
 }
