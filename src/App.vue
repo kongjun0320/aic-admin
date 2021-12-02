@@ -1,5 +1,13 @@
 <template>
-  <router-view />
+  <div>
+    <el-button type="primary">el-button</el-button>
+  </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+<style></style>
