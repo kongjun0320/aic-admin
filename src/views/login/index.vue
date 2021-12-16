@@ -6,24 +6,20 @@
       </div>
       <el-form-item>
         <span class="svg-container">
-          <el-icon>
-            <Avatar />
-          </el-icon>
+          <SvgIcon icon="user"></SvgIcon>
         </span>
         <el-input placeholder="username" name="username" type="text">
         </el-input>
       </el-form-item>
       <el-form-item>
         <span class="svg-container">
-          <el-icon>
-            <Avatar />
-          </el-icon>
+          <SvgIcon icon="password"></SvgIcon>
         </span>
         <el-input placeholder="password" name="password"> </el-input>
         <span class="show-pwd">
-          <el-icon>
-            <Avatar />
-          </el-icon>
+          <span class="svg-container">
+            <SvgIcon icon="eye"></SvgIcon>
+          </span>
         </span>
       </el-form-item>
       <el-button type="primary" style="width: 100%; margin-bottom: 30px"
@@ -33,9 +29,7 @@
   </div>
 </template>
 
-<script setup>
-import { Avatar } from '@element-plus/icons'
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 $bg: #2d3a4b;
