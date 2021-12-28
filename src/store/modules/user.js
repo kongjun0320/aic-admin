@@ -5,7 +5,7 @@ export default {
   namespaced: true,
   state: () => ({}),
   mutations: {},
-  action: {
+  actions: {
     login(context, userInfo) {
       const { username, password } = userInfo
       return new Promise((resolve, reject) => {

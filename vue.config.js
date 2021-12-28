@@ -32,6 +32,14 @@ module.exports = {
       })
       // 结束
       .end()
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://api.imooc-admin.lgdsunday.club/',
+        changeOrigin: true
+      }
+    }
   }
 }
 
