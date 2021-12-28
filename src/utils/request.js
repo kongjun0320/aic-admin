@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ELMessage } from 'element-plus'
+import { ElMessage } from 'element-plus'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -8,18 +8,18 @@ const service = axios.create({
 
 service.interceptors.response.use(
   (response) => {
-    const { success, message, data } = response
+    const { success, message, data } = response.data
     if (success) {
       return data
     } else {
       // 失败 => 请求成功 业务失败
-      ELMessage.error(message)
+      ElMessage.error(message)
       return Promise.reject(new Error(message))
     }
   },
   (error) => {
     // 请求失败
-    ELMessage.error(error.message)
+    ElMessage.error(error.message)
     return Promise.reject(error)
   }
 )

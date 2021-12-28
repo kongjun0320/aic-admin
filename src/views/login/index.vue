@@ -94,12 +94,10 @@ const handleLogin = () => {
     loading.value = true
     store
       .dispatch('user/login', loginForm.value)
-      .then((res) => {
-        console.log('res >>> ', res)
+      .then(() => {})
+      .catch(() => {})
+      .finally(() => {
         loading.value = false
-      })
-      .catch((error) => {
-        console.log('error >>> ', error)
       })
   })
 }
